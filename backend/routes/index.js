@@ -1,0 +1,16 @@
+module.exports = (router) => {
+  router.prefix('/api')
+  router.use('/authentications', require('./authentication'))
+  router.use('/users', require('./user'))
+  router.use('/accounts', require('./account'))
+  router.use('/userGroups', require('./userGroup'))
+  router.use('/alertGroups', require('./alertGroup'))
+  router.use('/alertMessages', require('./alertMessage'))
+  router.use('/cities', require('./city'))
+  router.use('/logs', require('./log'))
+  router.use('/downloads', require('./download'))
+  router.use('/logTypes', require('./logType'))
+  router.use('/permissions', require('./permission'))
+  router.use('/webs', require('./web'))
+  router.use('/__randomData__', require('./__randomData__'))
+}

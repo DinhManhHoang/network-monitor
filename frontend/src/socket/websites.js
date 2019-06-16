@@ -1,0 +1,4 @@
+export const CREATE = 'WEBSITES_CREATE'
+export const DESTROY = 'WEBSITES_DESTROY'
+export const UPDATE = 'WEBSITES_UPDATE'
+export const BROADCAST = 'WEBSITES_CHANGED'

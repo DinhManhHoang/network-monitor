@@ -1,0 +1,4 @@
+export const CREATE = 'ACCOUNTS_CREATE'
+export const DESTROY = 'ACCOUNTS_DESTROY'
+export const UPDATE = 'ACCOUNTS_UPDATE'
+export const BROADCAST = 'ACCOUNTS_CHANGED'

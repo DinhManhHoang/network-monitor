@@ -1,0 +1,1 @@
+export const BROADCAST = 'ALERT_MESSAGES_CHANGED'
