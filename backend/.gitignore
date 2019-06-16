@@ -7,9 +7,6 @@ logs
 npm-debug.log*
 .node-xmlhttprequest*
 
-# dotenv
-.env
-
 # Runtime data
 pids
 *.pid
