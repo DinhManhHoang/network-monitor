@@ -14,3 +14,11 @@ npm install
 cd ..
 npm run start
 ```
+
+Truy cập vào địa chỉ https://localhost:8000/
+
+## Lưu ý
+
+Phần mềm cần có NodeJS và MongoDB để hoạt động:
+* NodeJS: https://nodejs.org/en/
+* MongoDB: https://www.mongodb.com/
