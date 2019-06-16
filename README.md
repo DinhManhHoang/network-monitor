@@ -9,7 +9,7 @@ git clone https://github.com/DinhManhHoang/network-monitor.git
 cd backend/
 npm install
 cd ..
-cd fronend/
+cd frontend/
 npm install
 cd ..
 npm run start
