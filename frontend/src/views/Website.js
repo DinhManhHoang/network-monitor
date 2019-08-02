@@ -9,9 +9,8 @@ function Website({ authenticationState }) {
 
   const { auth } = authenticationState
 
-  //const permissionLevel = Math.min(parseInt(_.get(auth, 'permission.website', '0')), parseInt(_.get(auth, 'role.permission.website', '0')))
-  const permissionLevel = 2
-
+  const permissionLevel = Math.min(parseInt(_.get(auth, 'permission.website', '0')), parseInt(_.get(auth, 'role.permission.website', '0')))
+  
   return (
     <div>
       { permissionLevel === 0 && 

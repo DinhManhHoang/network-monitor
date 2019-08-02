@@ -76,12 +76,10 @@ module.exports = function (socket, client) {
         alertMessage.group.accounts.forEach(accountId => {
           find(accountId).then(email => {
             if (email === null) return
-            if (email.includes('dinhmanhhoang')) {
-              sendEmail(email, emailAlert)
+            sendEmail(email, emailAlert)
               .then((res) => {
                 console.log('Response: ', res)
               })
-            }
           })
         })
         update(alertMessage._id, { sent: '1' }).then(

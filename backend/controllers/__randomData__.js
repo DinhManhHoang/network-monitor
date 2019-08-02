@@ -316,12 +316,12 @@ async function __random__AlertMessage(AlertMessageMAX) {
 async function __randomData__(ctx) {
 
   await __random__UserGroup()
-  await __random__AccountUser(50)
+  await __random__AccountUser(20)
   await __random__City()
   await __random__LogType()
   await __random__AlertGroup()
-  await __random__AlertMessage(150)
-  await __random__Log(100000)
+  await __random__AlertMessage(50)
+  await __random__Log(50000)
 
 }
 

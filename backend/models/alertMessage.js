@@ -17,6 +17,7 @@ const AlertMessageSchema = new mongoose.Schema(
     sent: {
       type: String,
       enum: ["0", "1"],
+      default: "1",
       required: true,
     },
     group: {

@@ -28,6 +28,12 @@ const PermissionSchema = new mongoose.Schema(
       enum: ['0', '1', '2'],
       default: '2',
     },
+    website: {
+      type: String,
+      required: true,
+      enum: ['0', '1', '2'],
+      default: '2',
+    },
     permission: {
       type: String,
       required: true,

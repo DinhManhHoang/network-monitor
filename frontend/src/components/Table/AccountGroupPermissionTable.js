@@ -82,6 +82,9 @@ function AccountGroupPermissionTable({ permissionLevel, getAllAccountGroupsState
               { title: 'Quản lý Cảnh báo', field: 'permission.alert',
                 render: rowData => GetPermission(rowData.permission.alert)
               },
+              { title: 'Quản lý Trang web', field: 'permission.website',
+                render: rowData => GetPermission(rowData.permission.website)
+              },
               { title: 'Quản lý Quyền hệ thống', field: 'permission.permission',
                 render: rowData => GetPermission(rowData.permission.permission)
               },

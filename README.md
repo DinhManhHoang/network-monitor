@@ -12,10 +12,19 @@ cd ..
 cd frontend/
 npm install
 cd ..
-npm run start
+npm install
 ```
 
-Truy cập vào địa chỉ https://localhost:8000/
+Truy cập vào https://localhost:8001/api/__randomData__ để sinh data ngẫu nhiên
+Thay đổi giá trị ipAddress trong frontend/src/constants.js thành địa chỉ ip máy server
+
+Sau đó thực hiện
+
+```
+npm start
+```
+
+Truy cập https://localhost:8000/
 
 ## Lưu ý
 

@@ -41,6 +41,7 @@ function UpdateAccountPermissionDialog({ isOpen, setIsOpen, current, setCurrent,
   const [log, setLog] = React.useState('0')
   const [user, setUser] = React.useState('0')
   const [alert, setAlert] = React.useState('0')
+  const [website, setWebsite] = React.useState('0')
   const [permission, setPermission] = React.useState('0')
 
   function handleChangeDashboard(event) {
@@ -59,6 +60,10 @@ function UpdateAccountPermissionDialog({ isOpen, setIsOpen, current, setCurrent,
     setAlert(event.target.value)
   }
 
+  function handleChangeWebsite(event) {
+    setWebsite(event.target.value)
+  }
+
   function handleChangePermission(event) {
     setPermission(event.target.value)
   }
@@ -68,6 +73,7 @@ function UpdateAccountPermissionDialog({ isOpen, setIsOpen, current, setCurrent,
     setLog(_.get(current, 'log', '0'))
     setUser(_.get(current, 'user', '0'))
     setAlert(_.get(current, 'alert', '0'))
+    setWebsite(_.get(current, 'website', '0'))
     setPermission(_.get(current, 'permission', '0'))
   }, [current])
 
@@ -88,6 +94,7 @@ function UpdateAccountPermissionDialog({ isOpen, setIsOpen, current, setCurrent,
           log,
           user,
           alert,
+          website,
           permission,
         }
         updatePermission(newPermission)
@@ -209,7 +216,31 @@ function UpdateAccountPermissionDialog({ isOpen, setIsOpen, current, setCurrent,
                       </Select>
                     </FormControl>
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid item xs={12} sm={6}>
+                    <FormControl className={classes.formControl} fullWidth>
+                      <InputLabel htmlFor="alert-native-simple">Quản lý Trang web</InputLabel>
+                      <Select
+                        native
+                        value={website}
+                        onChange={handleChangeWebsite}
+                        inputProps={{
+                          name: 'website',
+                          id: 'alert-native-simple',
+                        }}
+                      >
+                        <option value={'0'}>
+                          Không truy cập
+                        </option>
+                        <option value={'1'}>
+                          Chỉ đọc
+                        </option>
+                        <option value={'2'}>
+                          Đọc và chỉnh sửa
+                        </option>
+                      </Select>
+                    </FormControl>
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
                     <FormControl className={classes.formControl} fullWidth>
                       <InputLabel htmlFor="permission-native-simple">Quản lý Quyền hệ thống</InputLabel>
                       <Select

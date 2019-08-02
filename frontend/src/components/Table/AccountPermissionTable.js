@@ -29,8 +29,8 @@ const useStyles = makeStyles(theme => ({
 
 function StackBarChart({ permissions }) {
 
-  let _categories = ['dashboard', 'user', 'log', 'alert', 'permission']
-  let categories = ['Bảng điều khiển', 'Quản lý Tài khoản', 'Quản lý Log', 'Quản lý Cảnh báo', 'Quản lý Quyền hệ thống']
+  let _categories = ['dashboard', 'user', 'log', 'alert', 'website', 'permission']
+  let categories = ['Bảng điều khiển', 'Quản lý Tài khoản', 'Quản lý Log', 'Quản lý Cảnh báo', 'Quản lý Trang web', 'Quản lý Quyền hệ thống']
   let dataName = [{ index: '0', name: 'Không truy cập' }, { index: '1', name: 'Chỉ đọc' }, { index: '2', name: 'Đọc và chỉnh sửa' }]
   let chartData = []
   dataName.forEach(name => {
@@ -131,7 +131,7 @@ function AccountPermissionTable({ permissionLevel, getAllAccountsState, getAllAc
   }
 
   const permissions = accounts.map(account => {
-    const categories = ['dashboard', 'user', 'log', 'alert', 'permission']
+    const categories = ['dashboard', 'user', 'log', 'alert', 'website', 'permission']
     let res = {}
     categories.forEach(category => {
       if (parseInt(account.permission[category]) < parseInt(account.role.permission[category])) {
@@ -167,6 +167,9 @@ function AccountPermissionTable({ permissionLevel, getAllAccountsState, getAllAc
               },
               { title: 'Quản lý Cảnh báo', field: 'permission.alert', grouping: false, 
                 render: rowData => GetPermission(rowData.permission.alert)
+              },
+              { title: 'Quản lý Trang web', field: 'permission.website', grouping: false, 
+                render: rowData => GetPermission(rowData.permission.website)
               },
               { title: 'Quản lý Quyền hệ thống', field: 'permission.permission', grouping: false, 
                 render: rowData => GetPermission(rowData.permission.permission)
